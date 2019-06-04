@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="MainWindow" fx:id="MainWindow" prefHeight="283.0" prefWidth="441.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Button fx:id="ExitBT" layoutX="50.0" layoutY="223.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="63.0" text="Exit" />
+      <Button fx:id="SalesBT" layoutX="135.0" layoutY="54.0" mnemonicParsing="false" onAction="#goToSales" prefHeight="48.0" prefWidth="187.0" text="Sales">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="ClaimsBT" layoutX="135.0" layoutY="117.0" mnemonicParsing="false" onAction="#goToClaims" prefHeight="48.0" prefWidth="187.0" text="Claims">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
