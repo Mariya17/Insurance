@@ -55,6 +55,9 @@ public class SalesController {
 
     @FXML // fx:id="sales"
     private AnchorPane sales; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="Age"
+    private ComboBox<String> Age; // Value injected by FXMLLoader
 
     @FXML
     void chooseInsuranceType(ActionEvent event) {
@@ -93,10 +96,15 @@ public class SalesController {
         }
     	Logger.getInstance().writeLog("Go back to main window");
     }
+    @FXML
+    void chooseAge(ActionEvent event) {
 
+    }
+    
     @FXML
     void save(ActionEvent event) {
     	String infoMessage = "";
+    	InsuranceFactory insuranceFactory = new InsuranceFactory();
     	
     	if(ClientFirstName.getText().isEmpty()){
     		infoMessage = "Please write client First Name.";  		
@@ -110,6 +118,9 @@ public class SalesController {
     	else if(AgentName.getValue()==null){
     		infoMessage = "Please choose Agent Name.";
     	}
+    	else if(Age.getValue()==null){
+    		infoMessage = "Please choose client age.";
+    	}
     	else
     	{
         	//Mariya return to factory
@@ -117,9 +128,12 @@ public class SalesController {
         			"\n\t\t\t\tClient Name: " + ClientFirstName.getText()+ " " + ClientFirstName.getText()+
         			"\n\t\t\t\tBy Agent: " + AgentName.getValue());
         	//saveBT.setText("Saved!");
-        	infoMessage = "Data was saved!";
+        	Insurance ins = insuranceFactory.create(Types.getValue());
+        	ins.computrInsCost(Integer.parseInt(Age.getValue()));
+        	//infoMessage = "Data was saved!";
         	ClientFirstName.clear();
         	ClientLastName.clear();
+        	return;
     	}
     	JOptionPane.showMessageDialog(null, infoMessage, "InfoMessage", JOptionPane.INFORMATION_MESSAGE);
     	
@@ -138,7 +152,7 @@ public class SalesController {
 
         
         BufferedReader br = new BufferedReader(new FileReader("C://Users//Mariya Portnoy//WorkSpace//Insurance//src//application//Config.xml"));
-       // InsuranceFactory insuranceFactory = new InsuranceFactory();
+        
         //BufferedReader br = new BufferedReader(new FileReader("C://Git//Insurance//src//applicationConfig.xml"));
         String timeStamp = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
         
@@ -171,6 +185,10 @@ public class SalesController {
             }           
         } finally {
             br.close();
+        }
+ 
+        for(int i = 0;i<121;i++){
+        	Age.getItems().add(Integer.toString(i));
         }
         
         //Due Date

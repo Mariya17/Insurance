@@ -1,11 +1,11 @@
 package application;
 
+import javax.swing.JOptionPane;
 
 public class LifeInsurance implements Insurance{
 
-	public void create()
+	public void computrInsCost(int age)
 	{
-		//TODO add name and cost
-		System.out.println("Life insurance."); 
+		JOptionPane.showMessageDialog(null, "New Life insurance was created.\n The cost is: " + Math.pow(age,2) + "NIS.", "InfoMessage", JOptionPane.INFORMATION_MESSAGE); 
 	}
 }

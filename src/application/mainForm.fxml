@@ -9,21 +9,21 @@
 
 <AnchorPane id="MainWindow" fx:id="MainWindow" prefHeight="302.0" prefWidth="539.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <ImageView id="mainImage" fx:id="mainImage" fitHeight="302.0" fitWidth="551.0" mouseTransparent="true" onDragDetected="#initialize" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="mainImage" fx:id="mainImage" fitHeight="308.0" fitWidth="547.0" mouseTransparent="true" onDragDetected="#initialize" opacity="0.68" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Insurance-Market.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="ExitBT" layoutX="50.0" layoutY="223.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="85.0" text="Exit">
+      <Button fx:id="ExitBT" layoutX="50.0" layoutY="223.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: PowderBlue;" text="Exit">
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Button fx:id="SalesBT" layoutX="210.0" layoutY="53.0" mnemonicParsing="false" onAction="#goToSales" prefHeight="48.0" prefWidth="187.0" text="Sales">
+      <Button fx:id="SalesBT" layoutX="210.0" layoutY="53.0" mnemonicParsing="false" onAction="#goToSales" prefHeight="48.0" prefWidth="187.0" style="-fx-background-color: PowderBlue;" text="Sales">
          <font>
             <Font size="23.0" />
          </font>
       </Button>
-      <Button fx:id="ClaimsBT" layoutX="210.0" layoutY="126.0" mnemonicParsing="false" onAction="#goToClaims" prefHeight="48.0" prefWidth="187.0" text="Claims">
+      <Button fx:id="ClaimsBT" layoutX="210.0" layoutY="126.0" mnemonicParsing="false" onAction="#goToClaims" prefHeight="48.0" prefWidth="187.0" style="-fx-background-color: PowderBlue;" text="Claims">
          <font>
             <Font size="23.0" />
          </font>

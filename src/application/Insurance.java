@@ -1,5 +1,5 @@
 package application;
 
 public interface Insurance {
-	void create();
+	void computrInsCost(int age);
 }

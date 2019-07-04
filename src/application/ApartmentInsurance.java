@@ -1,10 +1,11 @@
 package application;
 
+import javax.swing.JOptionPane;
+
 public class ApartmentInsurance implements Insurance{
 
-	public void create()
+	public void computrInsCost(int age)
 	{
-		//TODO add name and cost
-		System.out.println("Apartment insurance."); 
+		JOptionPane.showMessageDialog(null, "New Apartment insurance was created.\n The cost is: " + age*3 + "NIS.", "InfoMessage", JOptionPane.INFORMATION_MESSAGE);
 	}
 }
