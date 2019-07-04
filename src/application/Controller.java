@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -22,6 +23,10 @@ public class Controller {
 
     @FXML // fx:id="SalesBT"
     private Button SalesBT; // Value injected by FXMLLoader
+    
+
+    @FXML // fx:id="mainImage"
+    private ImageView mainImage; // Value injected by FXMLLoader
 
     @FXML // fx:id="MainWindow"
     private AnchorPane MainWindow; // Value injected by FXMLLoader
@@ -36,6 +41,7 @@ public class Controller {
     void exit(ActionEvent event) {
     	// get a handle to the stage
         Stage stage = (Stage) ExitBT.getScene().getWindow();
+        Logger.getInstance().writeLog("Exit from the system");
         // do what you have to do
         stage.close();
     }
@@ -47,6 +53,7 @@ public class Controller {
             Stage stage = (Stage) SalesBT.getScene().getWindow();
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
+            Logger.getInstance().writeLog("Open Sales window");
         }catch (IOException io){
             io.printStackTrace();
         }
@@ -55,11 +62,20 @@ public class Controller {
 
     @FXML
     void goToClaims(ActionEvent event) {
-
+    	try {
+    		FXMLLoader loader = new FXMLLoader(getClass().getResource("Claims.fxml"));
+    	  Stage stage = (Stage) SalesBT.getScene().getWindow();
+          Scene scene = new Scene(loader.load());
+          stage.setScene(scene);
+          Logger.getInstance().writeLog("Open Claims window");
+      }catch (IOException io){
+          io.printStackTrace();
+      }
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
+        assert mainImage != null : "fx:id=\"mainImage\" was not injected: check your FXML file 'mainForm.fxml'.";
         assert SalesBT != null : "fx:id=\"SalesBT\" was not injected: check your FXML file 'mainForm.fxml'.";
         assert MainWindow != null : "fx:id=\"MainWindow\" was not injected: check your FXML file 'mainForm.fxml'.";
         assert ClaimsBT != null : "fx:id=\"ClaimsBT\" was not injected: check your FXML file 'mainForm.fxml'.";

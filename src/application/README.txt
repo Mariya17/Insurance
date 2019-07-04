@@ -1,0 +1,1 @@
+In file SalesController replace path "C://Users//Mariya Portnoy//WorkSpace//Insurance//src//application//Config.xml" to your path

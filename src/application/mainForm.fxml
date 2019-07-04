@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="MainWindow" fx:id="MainWindow" prefHeight="283.0" prefWidth="441.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<AnchorPane id="MainWindow" fx:id="MainWindow" prefHeight="302.0" prefWidth="539.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <Button fx:id="ExitBT" layoutX="50.0" layoutY="223.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="63.0" text="Exit" />
-      <Button fx:id="SalesBT" layoutX="135.0" layoutY="54.0" mnemonicParsing="false" onAction="#goToSales" prefHeight="48.0" prefWidth="187.0" text="Sales">
+      <ImageView id="mainImage" fx:id="mainImage" fitHeight="302.0" fitWidth="551.0" mouseTransparent="true" onDragDetected="#initialize" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Insurance-Market.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="ExitBT" layoutX="50.0" layoutY="223.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="85.0" text="Exit">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="SalesBT" layoutX="210.0" layoutY="53.0" mnemonicParsing="false" onAction="#goToSales" prefHeight="48.0" prefWidth="187.0" text="Sales">
          <font>
             <Font size="23.0" />
          </font>
       </Button>
-      <Button fx:id="ClaimsBT" layoutX="135.0" layoutY="117.0" mnemonicParsing="false" onAction="#goToClaims" prefHeight="48.0" prefWidth="187.0" text="Claims">
+      <Button fx:id="ClaimsBT" layoutX="210.0" layoutY="126.0" mnemonicParsing="false" onAction="#goToClaims" prefHeight="48.0" prefWidth="187.0" text="Claims">
          <font>
             <Font size="23.0" />
          </font>

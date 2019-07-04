@@ -1,5 +1,7 @@
 package application;
 
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,15 +11,24 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-    	
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("mainForm.fxml"))));
+    	Scene scene = new Scene(FXMLLoader.load(getClass().getResource("mainForm.fxml")));
+    	//scene.getStylesheets().add("application.css");
+        stage.setScene(scene);
         stage.setTitle("Insuranse MAGM");
         stage.setResizable(false);
         stage.show();
     }
 
     public static void main(String[] args) {
+    	Logger logger = Logger.getInstance();
+    	logger.writeLog("Start");
         launch(args);
+            
+        try {
+        	logger.getInstance().writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
 }
 
