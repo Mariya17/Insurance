@@ -20,6 +20,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -46,6 +47,9 @@ public class SalesController {
 
     @FXML // fx:id="backBT"
     private Button backBT; // Value injected by FXMLLoader
+    
+    @FXML
+    private ImageView salesImage;
 
     @FXML // fx:id="ClientFirstName"
     private TextField ClientFirstName; // Value injected by FXMLLoader
@@ -123,7 +127,6 @@ public class SalesController {
     	}
     	else
     	{
-        	//Mariya return to factory
         	Logger.getInstance().writeLog("Save Insurance type: " + Types.getValue()+ 
         			"\n\t\t\t\tClient Name: " + ClientFirstName.getText()+ " " + ClientFirstName.getText()+
         			"\n\t\t\t\tBy Agent: " + AgentName.getValue());

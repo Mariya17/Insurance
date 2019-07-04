@@ -15,6 +15,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -31,6 +32,9 @@ public class ClaimsController {
 
     @FXML // fx:id="claimBT"
     private Button claimBT; // Value injected by FXMLLoader
+    
+    @FXML
+    private ImageView claimsImage;
 
     @FXML // fx:id="clientName"
     private ComboBox<String> clientName; // Value injected by FXMLLoader
