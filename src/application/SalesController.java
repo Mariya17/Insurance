@@ -130,10 +130,9 @@ public class SalesController {
         	Logger.getInstance().writeLog("Save Insurance type: " + Types.getValue()+ 
         			"\n\t\t\t\tClient Name: " + ClientFirstName.getText()+ " " + ClientFirstName.getText()+
         			"\n\t\t\t\tBy Agent: " + AgentName.getValue());
-        	//saveBT.setText("Saved!");
         	Insurance ins = insuranceFactory.create(Types.getValue());
         	ins.computrInsCost(Integer.parseInt(Age.getValue()));
-        	//infoMessage = "Data was saved!";
+        	//TODO save insurance in DB
         	ClientFirstName.clear();
         	ClientLastName.clear();
         	return;
@@ -156,7 +155,6 @@ public class SalesController {
         
         BufferedReader br = new BufferedReader(new FileReader("C://Users//Mariya Portnoy//WorkSpace//Insurance//src//application//Config.xml"));
         
-        //BufferedReader br = new BufferedReader(new FileReader("C://Git//Insurance//src//applicationConfig.xml"));
         String timeStamp = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
         
         try {
@@ -196,7 +194,6 @@ public class SalesController {
         
         //Due Date
         dueDate.setText(timeStamp);
-
         
     }
 }

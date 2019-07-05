@@ -80,7 +80,7 @@ public class ClaimsController {
 
     @FXML
     void claim(ActionEvent event) {
-String infoMessage = "";
+    	String infoMessage = "";
     	
     	if(clientName.getValue()==null){
     		infoMessage = "Please choose Client.";  		
@@ -93,11 +93,11 @@ String infoMessage = "";
     	}
     	else
     	{
-        	//Mariya return to factory
         	Logger.getInstance().writeLog("Claim Insurance type: " + Types.getValue()+ 
         			"\n\t\t\t\tClient Name: " + clientName.getValue()+
         			"\n\t\t\t\tBy Agent: " + AgentName.getValue());
-        	//saveBT.setText("Saved!");
+        	//TODO add to logger 
+        	//TODO save claim in DB
         	infoMessage = "Claim filed!";
         	
     	}
@@ -119,8 +119,7 @@ String infoMessage = "";
         try {
             StringBuilder sb = new StringBuilder();
             String line ;
-            
-         // Mariya get client name and policy from DB
+
             while ((line = br.readLine()) != null){
 	            if(line.contentEquals("#startAgents")){
 	            	line = br.readLine();
@@ -136,6 +135,6 @@ String infoMessage = "";
         } finally {
             br.close();
         }
-        
+     // TODO get client name and his policy from DB and add it to relevant combo boxes
     }
 }

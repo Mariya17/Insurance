@@ -9,7 +9,7 @@
 
 <AnchorPane id="MainWindow" fx:id="MainWindow" prefHeight="302.0" prefWidth="539.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <ImageView id="mainImage" fx:id="mainImage" fitHeight="308.0" fitWidth="547.0" mouseTransparent="true" onDragDetected="#initialize" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="mainImage" fx:id="mainImage" fitHeight="302.0" fitWidth="539.0" mouseTransparent="true" onDragDetected="#initialize" opacity="0.68" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Insurance-Market.jpg" />
          </image>

@@ -1,21 +1,12 @@
-2019-07-05 01:15: Start
-2019-07-05 01:15: Open Sales window
-2019-07-05 01:15: Save Insurance type: Car Insurance
-				Client Name: hhh hhh
+2019-07-05 13:08: Start
+2019-07-05 13:09: Open Sales window
+2019-07-05 13:10: Save Insurance type: Apartment Insurance
+				Client Name: mj mj
 				By Agent: Mariya
-2019-07-05 01:15: Save Insurance type: Apartment Insurance
-				Client Name: fg fg
+2019-07-05 13:10: Save Insurance type: Life Insurance
+				Client Name: gf gf
 				By Agent: Mariya
-2019-07-05 01:16: Save Insurance type: Life Insurance
-				Client Name: fhd fhd
-				By Agent: Mariya
-2019-07-05 01:16: Save Insurance type: Disability Insurance
-				Client Name: ll ll
-				By Agent: Mariya
-2019-07-05 01:16: Save Insurance type: Disability Insurance
-				Client Name: hgg hgg
-				By Agent: Mariya
-2019-07-05 01:16: Go back to main window
-2019-07-05 01:16: Open Claims window
-2019-07-05 01:16: Go back to main window
-2019-07-05 01:16: Exit from the system
+2019-07-05 13:10: Go back to main window
+2019-07-05 13:10: Open Claims window
+2019-07-05 13:10: Go back to main window
+2019-07-05 13:10: Exit from the system
