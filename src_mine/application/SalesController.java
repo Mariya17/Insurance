@@ -127,20 +127,12 @@ public class SalesController {
     	}
     	else
     	{
-    		ModelCustomer db = new ModelCustomer();
-    		try {
-				db.addCostumer(ClientFirstName.getText(), ClientLastName.getText(), Types.getValue());
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
         	Logger.getInstance().writeLog("Save Insurance type: " + Types.getValue()+ 
         			"\n\t\t\t\tClient Name: " + ClientFirstName.getText()+ " " + ClientLastName.getText()+
         			"\n\t\t\t\tBy Agent: " + AgentName.getValue());
-        	//saveBT.setText("Saved!");
         	Insurance ins = insuranceFactory.create(Types.getValue());
         	ins.computrInsCost(Integer.parseInt(Age.getValue()));
-        	//infoMessage = "Data was saved!";
+        	//TODO save insurance in DB
         	ClientFirstName.clear();
         	ClientLastName.clear();
         	return;
@@ -161,7 +153,7 @@ public class SalesController {
         assert sales != null : "fx:id=\"sales\" was not injected: check your FXML file 'Sales.fxml'.";
 
         
-        BufferedReader br = new BufferedReader(new FileReader("C://Users//Galit//workspace//Insurance-master//src//application//Config.xml"));
+        BufferedReader br = new BufferedReader(new FileReader("C://Users//Mariya Portnoy//WorkSpace//Insurance//src//application//Config.xml"));
         
         String timeStamp = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
         
@@ -202,7 +194,6 @@ public class SalesController {
         
         //Due Date
         dueDate.setText(timeStamp);
-
         
     }
 }

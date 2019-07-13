@@ -1,12 +1,18 @@
-2019-07-05 13:08: Start
-2019-07-05 13:09: Open Sales window
-2019-07-05 13:10: Save Insurance type: Apartment Insurance
-				Client Name: mj mj
+2019-07-13 08:59: Start
+2019-07-13 08:59: Open Sales window
+2019-07-13 09:00: Save Insurance type: Disability Insurance
+				Client Name: Tamar Barkan
+				By Agent: Galit
+2019-07-13 09:00: Save Insurance type: Disability Insurance
+				Client Name: Selley Alfia
 				By Agent: Mariya
-2019-07-05 13:10: Save Insurance type: Life Insurance
-				Client Name: gf gf
+2019-07-13 09:01: Save Insurance type: Apartment Insurance
+				Client Name: Tomer Kushnir
+				By Agent: Galit
+2019-07-13 09:02: Go back to main window
+2019-07-13 09:03: Open Claims window
+2019-07-13 09:10: Claim Insurance type: Life Insurance
+				Client Name: Tamar Barkan
 				By Agent: Mariya
-2019-07-05 13:10: Go back to main window
-2019-07-05 13:10: Open Claims window
-2019-07-05 13:10: Go back to main window
-2019-07-05 13:10: Exit from the system
+2019-07-13 09:10: Go back to main window
+2019-07-13 09:10: Exit from the system

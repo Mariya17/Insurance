@@ -1,10 +1,7 @@
-#startInsurance
 Car Insurance
 Apartment Insurance
 Life Insurance
 Disability Insurance
-#endInsurance
-#startAgents
+#AgentsName
 Mariya
 Galit
-#endAgents
